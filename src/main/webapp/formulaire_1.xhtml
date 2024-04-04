@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+    <h:head>
+        <title>Application&gt;formulaire_1</title>
+    </h:head>
+
+    <h:body>
+        <h1>Application&gt;formulaire_1</h1>
+
+        <h:form>
+            <h:outputLabel value="Entrez un nombre" for="nombre"/>
+            <h:inputText id="nombre" value="#{bean.nombre}"/>
+            <h:commandButton value="Valider" action="affichage_1"/>
+            <h:messages for="nombre"/>
+        </h:form>
+
+    </h:body>
+</html>
+<!-- 
+    _ Le bean requestscoped est ok pour affichage_1 et formulaire_1 puisu'on n'utilise qu'un bean pour mettre les valeurs à retourner à l'user des 2 jsf.
+    _ L'url ne change pas même si on change de page car il y a restore view.
+-->
