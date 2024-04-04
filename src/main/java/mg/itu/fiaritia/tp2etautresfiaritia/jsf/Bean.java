@@ -37,6 +37,14 @@ public class Bean {
     }
 
     /**
+     * Afficher le résultat correcte en prenant en compte le nombre saisi par l'user.
+     * @return String
+     */
+    public String afficher() {
+        return "affichage_3?nb="+nombre+"&faces-redirect=true";
+    }
+    
+    /**
      * Creates a new instance of Bean
      */
     public Bean() {
