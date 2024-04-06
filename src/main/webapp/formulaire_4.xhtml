@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core">
+    <h:head>
+        <title>Application&gt;formulaire_4</title>
+    </h:head>
+
+    <f:metadata>
+        <f:viewParam name="nb" value="#{bean4.nombre}"/>
+    </f:metadata>
+    
+    <h:body>
+        <h1>Application&gt;formulaire_4</h1>
+
+        <h:form>
+            <h:outputLabel value="Entrez un nombre" for="nombre"/>
+            <h:inputText id="nombre" value="#{bean4.nombre}"/>
+            <h:commandButton value="Valider" action="#{bean4.afficher()}"/>
+            <h:messages for="nombre"/>
+        </h:form>
+        <!--
+            _ On peut maintenant garder en marque page les résultats car le nombre est dans l'URL.
+        -->
+
+    </h:body>
+</html>
+<!-- 
+    En rajoutant metadata, on peut récupérer un paramètre de vue et afficher par défaut le nombre qu'on a saisi précédement dans l'input.
+-->
