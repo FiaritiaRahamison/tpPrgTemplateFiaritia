@@ -13,17 +13,15 @@
 
     <ui:insert name="metadata"/>
     
-    <ui:insert name="left">
-        <ui:include src="menu.xhtml"/>
-    </ui:insert>
-    
     <h:body>
         <div id="top" class="top">
             <ui:insert name="top">Top</ui:insert>
         </div>
         <div>
             <div id="left">
-                <ui:insert name="left">Left</ui:insert>
+                <ui:insert name="left">
+                    <ui:include src="menu.xhtml"/>
+                </ui:insert>
             </div>
             <div id="content" class="left_content">
                 <ui:insert name="content">Content</ui:insert>
