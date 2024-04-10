@@ -9,19 +9,17 @@
         <ui:composition template="./WEB-INF/templates/template_default.xhtml">
 
             <ui:define name="top">
-                TP PRG > Exercice 1 > Formulaire
+                TP PRG > Exercice 1 > Affichage
             </ui:define>
 
             <ui:define name="content">
-                <h1>Application&gt;formulaire_1</h1>
+                <h1>Application&gt;affichage_1</h1>
+                Les nombres : <br/>
+                <ui:repeat value="#{bean.nombresSuivants}" var="n" varStatus="status">
+                    #{n + 1}#{! status.last ? ', ' : ''}
+                </ui:repeat>
 
-                <h:form>
-                    <h:outputLabel value="Entrez un nombre" for="nombre"/>
-                    <h:inputText id="nombre" value="#{bean.nombre}"/>
-                    <h:commandButton value="Valider" action="affichage__1"/>
-                    <h:messages for="nombre"/>
-                </h:form>
-
+                <p><h:link outcome="formulaire__1" value="Saisir un autre nombre"/></p>
                 <p><h:outputLink value="index.xhtml">Accueil</h:outputLink></p>
             </ui:define>
 
