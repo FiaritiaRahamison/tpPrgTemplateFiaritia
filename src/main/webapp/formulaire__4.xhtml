@@ -8,15 +8,13 @@
     <body>
 
         <ui:composition template="./WEB-INF/templates/template_default.xhtml">
-
+            <ui:param name="titre" value="Exercice 4"/>
+            <ui:param name="type" value="Formulaire"/>
+            
             <ui:define name="metadata">
                 <f:metadata>
                     <f:viewParam name="nb" value="#{beantemplate4.nombre}"/>
                 </f:metadata>
-            </ui:define>
-
-            <ui:define name="top">
-                TP PRG > Exercice 4 > Formulaire
             </ui:define>
 
             <ui:define name="content">
